@@ -1,0 +1,10 @@
+{
+  "name": "dari",
+  "version": "0.1.0",
+  "description": "Build and deploy agents with Dari — hosted agent APIs with sandboxed execution, durable sessions, and replayable history.",
+  "author": {
+    "name": "Dari",
+    "url": "https://dari.dev"
+  },
+  "homepage": "https://docs.dari.dev"
+}
