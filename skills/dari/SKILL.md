@@ -125,7 +125,7 @@ Or drive the agent over HTTP — see https://docs.dari.dev/api-reference/overvie
 - **Omitting `sandbox`.** Required, not optional.
 - **Declaring top-level `runtime:`, `env:`, or `secrets:`.** All three now live inside the `sandbox` block — set `sandbox.dockerfile`, `sandbox.env`, and `sandbox.secrets` instead.
 - **Secret / env name doesn't match `^[A-Z_][A-Z0-9_]*$`.** Rename before publish.
-- **`sandbox.dockerfile` set to anything other than the literal string `Dockerfile`.** Only `Dockerfile` is accepted, and the file must exist at the project root.
+- **`sandbox.dockerfile` pointing at a path that doesn't exist in the bundle, or one that escapes the bundle root (`..`, absolute paths).** Any repo-relative path inside the bundle is accepted (e.g. `Dockerfile`, `docker/Dockerfile.prod`); the file must exist.
 
 ## Heads-up: two different things called "skills"
 
