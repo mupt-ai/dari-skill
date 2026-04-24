@@ -120,7 +120,6 @@ Or drive the agent over HTTP — see https://docs.dari.dev/api-reference/overvie
 ## Common mistakes
 
 - **Raw API keys in `dari.yml`.** Use a stored-credential reference (step 3). The manifest only accepts names.
-- **Listing `llm.api_key_secret` or `sandbox.provider_api_key_secret` under `sandbox.secrets`.** Those live in their own fields and must *not* also appear in `sandbox.secrets`.
 - **Invented built-in tool names.** Valid set: `read`, `bash`, `edit`, `write`, `grep`, `find`, `ls`. Anything else fails publish.
 - **Omitting `sandbox`.** Required, not optional.
 - **Declaring top-level `runtime:`, `env:`, or `secrets:`.** All three now live inside the `sandbox` block — set `sandbox.dockerfile`, `sandbox.env`, and `sandbox.secrets` instead.
